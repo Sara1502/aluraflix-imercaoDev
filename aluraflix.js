@@ -1,16 +1,5 @@
-function adicionarFilme() {
-  var campoFilmeFavorito = document.querySelector('#filme')
-  var filmeFavorito = campoFilmeFavorito.value
-  if (filmeFavorito.endsWith('.jpg')){
-    listarFilmesNaTela(filmeFavorito)
-  } else {
-      alert("Imagem inválida")
-  }
-  campoFilmeFavorito.value = ""
-}
+var listaDramas = ["https://i.mydramalist.com/v3032_4c.jpg?v=1","https://i.mydramalist.com/qP2kK_4c.jpg?v=1","https://i.mydramalist.com/xy8oq_4c.jpg?v=1" ]
 
-function listarFilmesNaTela(filme) {
-  var liataFilmes = document.querySelector('#listaFilmes')
-  var elementoFilme = "<img src=" + filme + ">"
-  listaFilmes.innerHTML = listaFilmes.innerHTML + elementoFilme
+for (var i = 0; i < listaDramas.length; i++){
+  document.write("<img src=" + listaDramas[i] + ">")
 }
